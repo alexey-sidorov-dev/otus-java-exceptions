@@ -3,8 +3,9 @@ import org.junit.jupiter.api.Test;
 import ru.otus.java.basic.App;
 
 public class AppTest {
-@Test
-  public void testMain(){
-  Assertions.assertDoesNotThrow(()-> App.main(new String[] {}));
-}
+
+  @Test
+  public void testMain() {
+    Assertions.assertDoesNotThrow(() -> App.main(new String[]{}));
+  }
 }
