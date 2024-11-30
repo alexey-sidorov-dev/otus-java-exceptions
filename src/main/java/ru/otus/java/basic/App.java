@@ -16,7 +16,7 @@ public class App {
           System.out.println("Переданный массив: " + Arrays.deepToString(array));
           System.out.println("Сумма всех элементов массива: " + sumArrayElements(array));
         }
-      } catch (Exception e) {
+      } catch (AppArraySizeException | AppArrayDataException e) {
         System.out.println(e.getMessage());
       }
     }
@@ -39,7 +39,7 @@ public class App {
       throws AppArraySizeException, AppArrayDataException {
     int sum = 0;
 
-    if (array.length != 4) {
+    if (array == null || array.length != 4) {
       throw new AppArraySizeException();
     }
     for (int i = 0; i < array.length; i++
